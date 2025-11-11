@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'copy jukhn.html D:\Courses'
+                bat 'copy jukhn.html D:\\Courses'
+'
             }
         }
     }
