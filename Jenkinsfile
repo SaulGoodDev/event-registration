@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/event-registration-form.git'
+                git 'https://github.com/SaulGoodDev/event-registration.git'
             }
         }
         stage('Build') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'copy index.html C:\\path\\to\\deploy\\folder'
+                bat 'copy index.html D:\Courses'
             }
         }
     }
