@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/SaulGoodDev/event-registration.git'
+                git credentialsId: 'github-token', 
+                    url: 'https://github.com/SaulGoodDev/event-registration.git',
+                    branch: 'main'
             }
         }
         stage('Build') {
@@ -19,7 +21,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'copy jukhn.html D:\\Courses'
-'
             }
         }
     }
